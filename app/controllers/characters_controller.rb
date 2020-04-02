@@ -42,10 +42,11 @@ class CharactersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_character
       @character = Character.find(params[:id])
+
     end
 
     # Only allow a trusted parameter "white list" through.
     def character_params
-      params.require(:character).permit(:name, :exp, :personality, :alignment, :backstory, :appearance, :inspiration)
+      params.require(:character).permit(:name, :exp, :personality, :alignment, :backstory, :appearance, :inspiration, :user_id)
     end
 end

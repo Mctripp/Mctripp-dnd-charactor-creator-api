@@ -13,7 +13,8 @@ curl "http://localhost:4741/characters" \
       "alignment": "'"${ALIGNMENT}"'",
       "backstory": "'"${BACKSTORY}"'",
       "appearance": "'"${APPEARANCE}"'",
-      "inspiration": "'"${INSPIRATION}"'"
+      "inspiration": "'"${INSPIRATION}"'",
+      "user_id": "'"${USER_ID}"'"
     }
   }'
 

@@ -1,9 +1,9 @@
-class CharactersController < ApplicationController
+class CharactersController < ProtectedController
   before_action :set_character, only: [:show, :update, :destroy]
 
   # GET /characters
   def index
-    @characters = Character.all
+    @characters = current_user.characters
 
     render json: @characters
   end
@@ -15,7 +15,7 @@ class CharactersController < ApplicationController
 
   # POST /characters
   def create
-    @character = Character.new(character_params)
+    @character = current_user.characters.build(character_params)
 
     if @character.save
       render json: @character, status: :created, location: @character
@@ -41,12 +41,12 @@ class CharactersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_character
-      @character = Character.find(params[:id])
+      @character = current_user.characters.find(params[:id])
 
     end
 
     # Only allow a trusted parameter "white list" through.
     def character_params
-      params.require(:character).permit(:name, :exp, :personality, :alignment, :backstory, :appearance, :inspiration, :user_id)
+      params.require(:character).permit(:name, :personality, :alignment, :backstory, :appearance)
     end
 end

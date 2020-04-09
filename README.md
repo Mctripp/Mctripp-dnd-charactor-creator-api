@@ -2,13 +2,13 @@
 
 Frontend: https://mctripp.github.io/Mctripp-dnd-character-creator-client/
 Backend: https://ga-proj2-dnd-5e-api.herokuapp.com/
-Client repo:https://github.com/Mctripp/Mctripp-dnd-charactor-creator-client
+Client repo:https://github.com/Mctripp/Mctripp-dnd-character-creator-client
 
 This app uses an API and a frontend client to store and retrieve character information specific to a user. Originally the objective was to design a random character generator for D&D 5e, but the scope was too big and I decided to simplify many aspects of the project.
 
 #ERD
 
-![ERD](https://github.com/Mctripp/Mctripp-dnd-charactor-creator-api/blob/master/public/erd.jpg)
+![ERD](https://github.com/Mctripp/Mctripp-dnd-charactor-creator-api/public/erd.jpg)
 
 #User Stories
 I want a user to be able to:
